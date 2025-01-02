@@ -111,7 +111,7 @@ Setup nginx
   </code>
 </pre>
 
-## need database configaration
+## need database configaration before step 6
 
 ### STEP 6
 Configure nginx 
