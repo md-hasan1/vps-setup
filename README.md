@@ -1,7 +1,7 @@
 # VPS SETUP
 
 
- <a href='https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04#step-1-installing-certbot'> digital ocen</a>
+ <a href='https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04#step-1-installing-certbot'> digital ocen ssl</a>
 ### STEP 1
 <pre>
   <code id="example-code">
