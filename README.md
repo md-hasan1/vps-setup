@@ -2,6 +2,7 @@
 
 
  <a href='https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04#step-1-installing-certbot'> digital ocen ssl</a>
+ <a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/"> mongodb install</a>
 ### STEP 1
 <pre>
   <code id="example-code">
@@ -9,7 +10,6 @@
   </code>
 </pre>
 Then enter your password
-
 ### STEP 2
 Updated backdated packges
 <pre>
@@ -22,39 +22,31 @@ Updated backdated packges
    sudo apt upgrade
   </code>
 </pre>
-
 ### STEP 3
 Enabling and Configuring UFW (Uncomplicated Firewall)
-
 <pre>
   <code id="example-code">
    sudo ufw enable
   </code>
 </pre>
-
 <pre>
   <code id="example-code">
    sudo ufw allow 22
   </code>
 </pre>
-
 Check allow port status 
-
 <pre>
   <code id="example-code">
    sudo ufw status
   </code>
 </pre>
-
 ### STEP 3
 Install NVM & Node.js
-
 <pre>
   <code id="example-code">
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
   </code>
 </pre>
-
 <pre>
   <code id="example-code">
     nvm -v
@@ -65,7 +57,6 @@ Install NVM & Node.js
   </code>
 </pre>
 Note: If version not showing please close the terminal and try again
-
 ## STEP 4
 git hub connection 
 <pre>
@@ -89,13 +80,11 @@ git hub connection
   </code>
 </pre>
 Then copy the ssh key and pas it on your SSH and GPG kesy on your git hub clik new ssh key and write project name and past the key
-
 <pre>
   <code id="example-code">
    ssh -T git@github.com
   </code>
 </pre>
-
 ### STEP 5
 Setup nginx 
 <pre>
@@ -112,15 +101,12 @@ Setup nginx
     sudo ufw enable
   </code>
 </pre>
-
 ## need database configaration before step 6
-
 ### STEP 6
 Configure nginx 
 <pre>
   <code id="example-code">
     sudo nano /etc/nginx/sites-available/yourdomain.com
-
     #this is for next js
     server {
     listen 80;
@@ -133,8 +119,7 @@ Configure nginx
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
         }
-    }
-    
+    } 
     sudo ln -s /etc/nginx/sites-available/yourdomain.com /etc/nginx/sites-enabled
 
     #this is backend server setup
@@ -157,9 +142,6 @@ Configure nginx
     sudo systemctl reload nginx
   </code>
 </pre>
-
-
-
 ### STEP 7
 Install Project & Setup
 <pre>
@@ -180,7 +162,6 @@ Install Project & Setup
       pm2 delete nextjs-app (delete server)
   </code>
 </pre>
-
 ### STEP 8
 Install SSL
 <pre>
