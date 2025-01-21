@@ -163,6 +163,27 @@ Install Project & Setup
   </code>
 </pre>
 ### STEP 8
+Create replica
+<pre>
+  <code id="example-code">
+     sudo ufw allow 27017 
+     sudo nano etc/mongod.config 
+
+
+   replication:
+    replSetName: "rs0"
+
+   sudo systemctl restart mongod
+     mongosh
+     rs.initiate()
+
+   ## for env 
+     DATABASE_URL="mongodb://127.0.0.1:27017/kumba?replicaSet=rs0"
+   
+    
+  </code>
+</pre>
+### STEP 9
 Install SSL
 <pre>
   <code id="example-code">
