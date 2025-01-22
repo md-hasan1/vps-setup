@@ -136,6 +136,32 @@ Configure nginx
                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
      }
+
+
+   ##For Websocket
+    server{
+        listen 80;
+        server_name api.myfinancialtrading.com;
+
+      location / {
+             proxy_pass http://localhost:5008;
+             
+             # WebSocket-specific headers
+             proxy_http_version 1.1;                 
+             proxy_set_header Upgrade $http_upgrade; 
+             proxy_set_header Connection "Upgrade";  
+         
+             # Additional proxy headers
+             proxy_set_header Host $host;                    
+             proxy_set_header X-Forwarded-Host $host;      
+             proxy_set_header X-Forwarded-Proto $scheme;     
+             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
+         
+             # Optional: Disable caching for WebSocket connections
+             proxy_cache_bypass $http_upgrade; # Ensures that WebSocket connections are not cached.
+         }
+
+     }
     
     sudo ln -s /etc/nginx/sites-available/api.yourdomain.com /etc/nginx/sites-enabled
     sudo nginx -t
