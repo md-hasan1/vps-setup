@@ -193,7 +193,7 @@ Create replica
 <pre>
   <code id="example-code">
      sudo ufw allow 27017 
-     sudo nano etc/mongod.config 
+     sudo nano etc/mongod.conf 
 
 
    replication:
