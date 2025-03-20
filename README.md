@@ -139,6 +139,11 @@ Configure nginx
 
 
    ##For Websocket
+
+  sudo nano etc/nginx/conf.d/file.conf
+
+
+   
     server{
         listen 80;
         server_name api.myfinancialtrading.com;
