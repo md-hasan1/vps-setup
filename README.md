@@ -147,6 +147,7 @@ Configure nginx
     server{
         listen 80;
         server_name api.myfinancialtrading.com;
+           client_max_body_size 1000M;
 
       location / {
              proxy_pass http://localhost:5008;
