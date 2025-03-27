@@ -48,6 +48,9 @@ Install NVM & Node.js
   </code>
 </pre>
 <pre>
+  <code id="example-code">source ~/.bashrc</code>
+</pre>
+<pre>
   <code id="example-code">
     nvm -v
     nvm install --lts
